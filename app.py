@@ -32,16 +32,12 @@ def imageadd():
 
 @app.route('/imageadd', methods=['POST'])
 def post():
-	
 	# ファイルのリクエストパラメータを取得
 	f = request.files.get('image')
-	
 	# ファイル名を取得
 	filename = secure_filename(f.filename)
-	
 	# ファイルを保存するディレクトリを指定
 	filepath = 'static/img/' + filename
-	
 	# ファイルを保存する
 	f.save(filepath)
 	
@@ -51,6 +47,10 @@ def post():
 		flag = True, \
 		image_name = filename, \
 		image_url = filepath)
+
+@app.route("/imagebottun", methods=["POST"])
+def imgbtn():
+	return "てすとだよ"
 
 if __name__ == "__main__":
     # Flask が持っている開発用サーバーを、実行します。

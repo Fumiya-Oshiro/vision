@@ -23,5 +23,21 @@
 			<input type="submit" value="送信">
 		</div>
 	</form>
+
+	<form action="/" method="POST" enctype="multipart/form-data">
+        <input type="text" name="name" placeholder="何か入力してみてね">
+        <input type="submit" value="送信">
+    </form>
+
+    <form action="/imagebottun" method="POST"></form>
+    <p>
+    入力欄：<input type="image" name="imagebottun">
+    </p>
+    <p>
+    <input type="image" src="../static/img/icon.jpeg">
+    </p>
+	<p>{{ image_added }}</p>
+
+
 </body>
 </html>
