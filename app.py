@@ -10,22 +10,27 @@ from datetime import datetime
 
 app = Flask(__name__)
 
-# @app.route("/")
-# def index():
-#     return render_template("toppage.html")
+@app.route("/")
+def index():
+    return render_template("toppage.html")
 
 
 # ファイル容量上限 : 1MB
 app.config['MAX_CONTENT_LENGTH'] = 1 * 1024 * 1024
 
-@app.route('/', methods=['GET'])
+@app.route('/imageadd', methods=['GET'])
 def get():
 	return render_template('index.html', \
 		title = 'Form Sample(get)', \
 		message = '画像を選択して下さい。', \
 		flag = False)
 
-@app.route('/', methods=['POST'])
+
+@app.route("/imageadd.html")
+def imageadd():
+	return render_template("imageadd.html")
+
+@app.route('/imageadd', methods=['POST'])
 def post():
 	
 	# ファイルのリクエストパラメータを取得
