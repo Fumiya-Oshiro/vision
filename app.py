@@ -15,6 +15,18 @@ def index():
     return render_template("toppage.html")
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 # ファイル容量上限 : 1MB
 app.config['MAX_CONTENT_LENGTH'] = 1 * 1024 * 1024
 
@@ -24,7 +36,6 @@ def get():
 		title = 'Form Sample(get)', \
 		message = '画像を選択して下さい。', \
 		flag = False)
-
 
 @app.route("/imageadd.html")
 def imageadd():
@@ -48,9 +59,33 @@ def post():
 		image_name = filename, \
 		image_url = filepath)
 
+
+@app.route("/imagetest.html")
+def imagetest():
+	return render_template("imagetest.html")
+
+#送信てすと#
+@app.route('/submitted', methods=['GET'])
+def yetsubmitted():
+	return render_template('imagetest.html', \
+		title = 'Form Sample(get)', \
+		message = '名前を入力して下さい。')
+
+# postのときの処理	
+@app.route('/submitted', methods=['POST'])
+def submitted():
+	name = request.form['name']
+	return render_template('imagetest.html', \
+		title = '入力ありがとう', \
+		message = 'こんにちは、{}さん'.format(name))
+
+
 @app.route("/imagebottun", methods=["POST"])
-def imgbtn():
-	return "てすとだよ"
+def imgbtn_post():
+	name = request.form['imagebottun']
+	return render_template('imagetest.html', \
+	message2 = '{}'.format(name))
+
 
 if __name__ == "__main__":
     # Flask が持っている開発用サーバーを、実行します。

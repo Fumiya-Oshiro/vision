@@ -8,8 +8,27 @@
 </head>
 <body>
     
-    <label for="name">名前</label>
+    <h1>{{ title }}</h1>
+	<p>{{ message }}</p>
+	<form action="/submitted" method="POST" enctype="multipart/form-data">
+		<div>
+			<label for="name">名前：</label>
+			<input type="text" id="name" name="name" placeholder="名前">	
+		</div>
+		<div>
+			<input type="submit" value="送信">
+		</div>
+	</form>
 
+    <form action="/imagebottun" method="POST">
+    <p>
+    入力欄：<input type="text" name="imagebottun">
+    </p>
+    <p>
+    <input type="image" src="../static/img/icon.jpeg" alt="送信">
+    </p>
+	<p>{{ message2 }}</p>
+    </form>
 
 </body>
 </html>
