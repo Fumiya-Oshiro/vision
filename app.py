@@ -88,8 +88,8 @@ def imgbtn_post2():
 
 @app.route("/radio",methods=["POST"])
 def radio():
-	if request.form.get("name") == "q10":
-		
+	# if request.form.get("name") == "q10":
+	return render_template("/imagetest.html")	
 
 
 if __name__ == "__main__":
