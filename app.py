@@ -22,11 +22,6 @@ def index():
 
 
 
-
-
-
-
-
 # ファイル容量上限 : 1MB
 app.config['MAX_CONTENT_LENGTH'] = 1 * 1024 * 1024
 
@@ -85,6 +80,16 @@ def imgbtn_post():
 	name = request.form['imagebottun']
 	return render_template('imagetest.html', \
 	message2 = '{}'.format(name))
+
+@app.route("/imagebottun2", methods=["POST"])
+def imgbtn_post2():
+	message3 = "あいうえお"
+	return render_template('imagetest.html', message3 = message3)
+
+@app.route("/radio",methods=["POST"])
+def radio():
+	if request.form.get("name") == "q10":
+		
 
 
 if __name__ == "__main__":

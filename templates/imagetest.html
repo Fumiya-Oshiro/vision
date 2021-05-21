@@ -7,7 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    
+
+    <h1>普通のボタンテスト</h1>
+
     <h1>{{ title }}</h1>
 	<p>{{ message }}</p>
 	<form action="/submitted" method="POST" enctype="multipart/form-data">
@@ -20,6 +22,8 @@
 		</div>
 	</form>
 
+    <h1>画像ボタン</h1>
+
     <form action="/imagebottun" method="POST">
     <p>
     入力欄：<input type="text" name="imagebottun">
@@ -29,6 +33,23 @@
     </p>
 	<p>{{ message2 }}</p>
     </form>
+
+    <h1>画像ボタン2</h1>
+
+    <form action="/imagebottun2" method="POST">
+        <input type="image" src="../static/img/icon.jpeg" name="imagebottun" alt="送信">
+        <p>{{ message3 }}</p>
+    </form>
+
+
+    <h1>選択されたボタンの表示のテスト</h1>
+    <p>3択<br>
+    <input type="radio" name="q10" value="はい">はい
+    <input type="radio" name="q11" value="いいえ">いいえ
+    <input type="radio" name="q12" value="どちらでもない">どちらでもない
+    </p>
+
+
 
 </body>
 </html>
