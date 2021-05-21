@@ -17,8 +17,8 @@ img {
   border: 0px;
   vertical-align: bottom;
   margin: 0 auto;
-  margin-bottom: 200px;
   height: auto;
+  margin-bottom: 30px;
   width: 300px;
   margin-left: 20px;
 }
@@ -32,6 +32,21 @@ body {
 }
 
 .logo {
+  text-align: center;
+}
+
+.catch {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.description1 {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.description2 {
+  font-size: 1.2em;
   text-align: center;
 }
 
