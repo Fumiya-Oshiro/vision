@@ -74,7 +74,6 @@ def submitted():
 		title = '入力ありがとう', \
 		message = 'こんにちは、{}さん'.format(name))
 
-
 @app.route("/imagebottun", methods=["POST"])
 def imgbtn_post():
 	name = request.form['imagebottun']
@@ -88,8 +87,31 @@ def imgbtn_post2():
 
 @app.route("/radio",methods=["POST"])
 def radio():
-	if request.form.get("name") == "q10":
-		
+	if request.form.get("q1") == "はい":
+		ans = "はい"
+		return render_template("/imagetest.html",ans = ans)
+	elif request.form.get("q1") == "いいえ":
+		ans = "いいえ"
+		return render_template("/imagetest.html",ans = ans)
+	else:
+		ans = "どちらでもない"
+		return render_template("/imagetest.html",ans = ans)
+
+@app.route("/radio2",methods=["POST"])
+def radio2():
+	if request.form.get("q1") == "はい":
+		url = "../static/img/icon.jpeg"
+		return render_template("/imagetest.html",url = url)
+	elif request.form.get("q1") == "いいえ":
+		url = "../static/img/画像１.jpg"
+		return render_template("/imagetest.html",url = url)
+	else:
+		url = "../static/img/画像２.jpg"
+		return render_template("/imagetest.html",url = url)
+
+
+
+
 
 
 if __name__ == "__main__":

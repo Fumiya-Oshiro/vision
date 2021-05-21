@@ -42,14 +42,28 @@
     </form>
 
 
-    <h1>選択されたボタンの表示のテスト</h1>
+    <h1>選択されたボタンごとに表示を変える</h1>
+    <form action="/radio" method="POST">
     <p>3択<br>
-    <input type="radio" name="q10" value="はい">はい
-    <input type="radio" name="q11" value="いいえ">いいえ
-    <input type="radio" name="q12" value="どちらでもない">どちらでもない
+    <input type="radio" name="q1" value="はい">はい
+    <input type="radio" name="q1" value="いいえ">いいえ
+    <input type="radio" name="q1" value="どちらでもない">どちらでもない
     </p>
+    <input type="submit" value="送信する">
+    </form>
+    {{ ans }}
 
-
+    <h1>選択されたボタンごとに違う画像を表示</h1>
+    <form action="/radio2" method="POST">
+    <p>3択<br>
+    <input type="radio" name="q1" value="はい">はい
+    <input type="radio" name="q1" value="いいえ">いいえ
+    <input type="radio" name="q1" value="どちらでもない">どちらでもない
+    </p>
+    <input type="submit" value="送信する">
+    </form>
+    <img src="{{ url }}" alt="画像">
+    
 
 </body>
 </html>
