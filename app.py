@@ -39,15 +39,15 @@ def about2():
 	return render_template("aboutpage.html")
 
 @app.route("/page1money.html")
-def pagemoney():
+def page1money():
 	return render_template("page1money.html")
 
 @app.route("/page1")
-def pagemoney():
+def page1money2():
 	return render_template("page1money.html")
 
 @app.route("/money")
-def pagemoney():
+def page1money3():
 	return render_template("page1money.html")
 
 
