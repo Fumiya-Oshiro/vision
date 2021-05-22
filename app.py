@@ -14,9 +14,13 @@ app = Flask(__name__)
 def index():
     return render_template("toppage.html")
 
+@app.route("/aboutpage.html")
+def about():
+	return render_template("aboutpage.html")
 
-
-
+@app.route("/aboutpage")
+def about2():
+	return render_template("aboutpage.html")
 
 
 
