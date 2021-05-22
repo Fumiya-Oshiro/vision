@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/css/imagetest.css">
     <title>Document</title>
 </head>
 <body>
@@ -37,7 +38,7 @@
     <h1>画像ボタン2</h1>
 
     <form action="/imagebottun2" method="POST">
-        <input type="image" src="../static/img/icon.jpeg" name="imagebottun" alt="送信">
+        <input type="image" src="../static/img/icon.jpeg" name="imagebottun" alt="送信" class="imagebutton">
         <p>{{ message3 }}</p>
     </form>
 
@@ -64,6 +65,12 @@
     </form>
     <img src="{{ url }}" alt="画像">
     
+    <div class="border-test">aiu</div>
+
+    <button type="button" name="button" value="button">
+        <font size="10" color="red">ボタンだよ</font>
+    </button>
+
 
 </body>
 </html>

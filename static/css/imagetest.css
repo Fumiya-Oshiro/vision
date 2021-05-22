@@ -1,0 +1,34 @@
+.imagebutton {
+    border: solid;
+    border-color: black;
+    border-width: 10px;
+}
+
+.border-test {
+    height: 300px;
+    width: 300px;
+    mergin: 0 auto;
+    background-color: orange;
+    border: 10px solid;
+    border-color: black;
+}
+
+.submit input {
+    border-color: red;
+    border-style: solid;
+}
+
+button {
+    border: 3px;
+    border-color: black;
+    border-style: solid;
+    padding: 0 0;
+    /* border: 3px solid red; */
+}
+
+button:active {
+    background-color: green;
+    border: 10px;
+    border-color: black;
+    border-style: solid;
+}
