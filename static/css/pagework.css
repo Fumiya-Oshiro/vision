@@ -1,0 +1,31 @@
+body {
+    text-align: center;
+
+}
+
+.a {
+    text-align: center;
+}
+
+.exposition1 p {
+    font-size: 20px;
+}
+
+.exposition2 {
+    margin-top: 50px;
+}
+
+.picselect {
+    text-align: center;
+}
+
+.container {
+    font-size: 20px;
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container {
+    text-align: left;
+}
