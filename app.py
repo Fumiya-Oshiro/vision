@@ -14,7 +14,9 @@ app = Flask(__name__)
 def index():
     return render_template("toppage.html")
 
-
+@app.route("/advance")
+def index():
+	return render_template("adoutapage.html")
 
 
 

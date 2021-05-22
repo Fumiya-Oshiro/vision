@@ -1,6 +1,6 @@
 body {
     text-align: center;
-    background-image: url(bgframe.png);
+    background-image: url(../img/bgframe.png);
     background-image: no-repeat center center;
     background-size: cover;
 }
