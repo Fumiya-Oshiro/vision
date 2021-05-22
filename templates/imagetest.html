@@ -8,6 +8,7 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="target">
 
     <h1>普通のボタンテスト</h1>
 
@@ -63,13 +64,46 @@
     </p>
     <input type="submit" value="送信する">
     </form>
-    <img src="{{ url }}" alt="画像">
+    <img src="{{ url }}" alt="">
     
     <div class="border-test">aiu</div>
 
     <button type="button" name="button" value="button">
         <font size="10" color="red">ボタンだよ</font>
     </button>
+
+    <h1>ラジオボタンを画像にする</h1>
+
+
+    </div> <!--targetディビジョン-->
+
+    <a href="" id="ss" download="html_ss.png">スクリーンショット(document.body全体)をダウンロード</a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+    <script>
+      //ロードされた際の処理として実施：
+      window.onload = function(){
+  
+        //HTML内に画像を表示
+        html2canvas(document.getElementById("target"),{
+          onrendered: function(canvas){
+            //imgタグのsrcの中に、html2canvasがレンダリングした画像を指定する。
+            var imgData = canvas.toDataURL();
+            document.getElementById("result").src = imgData;
+          }
+        });
+  
+        //ボタンを押した際にダウンロードする画像を作る
+        html2canvas(document.body,{
+          onrendered: function(canvas){
+            //aタグのhrefにキャプチャ画像のURLを設定
+            var imgData = canvas.toDataURL();
+            document.getElementById("ss").href = imgData;
+          }
+        });
+  
+      }
+    </script>
 
 
 </body>
