@@ -1,7 +1,7 @@
 body {
     text-align: center;
-    background-image: url(bgframe.png);
-    background-image: no-repeat center center;
+    background-image: url(../img/bgframe.png);
+    /* no-repeat center center */
     background-size: cover;
 }
 
