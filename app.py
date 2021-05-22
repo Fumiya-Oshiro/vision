@@ -14,6 +14,22 @@ app = Flask(__name__)
 def index():
     return render_template("toppage.html")
 
+@app.route("/toppage.html")
+def index2():
+    return render_template("toppage.html")
+
+@app.route("/toppage.html")
+def index3():
+    return render_template("toppage.html")
+
+@app.route("/index.html")
+def index4():
+    return render_template("toppage.html")
+
+@app.route("/index")
+def index5():
+    return render_template("toppage.html")
+
 @app.route("/aboutpage.html")
 def about():
 	return render_template("aboutpage.html")
