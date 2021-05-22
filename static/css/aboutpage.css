@@ -1,0 +1,30 @@
+body {
+    text-align: center;
+    background-image: url(bgframe.png);
+    background-image: no-repeat center center;
+    background-size: cover;
+}
+
+.a {
+    text-align: center;
+}
+
+.exposition1 p {
+    font-size: 20px;
+}
+
+.exposition2 {
+    margin-top: 50px;
+}
+
+
+.container {
+    font-size: 20px;
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container {
+    text-align: left;
+}
