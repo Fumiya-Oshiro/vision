@@ -50,6 +50,81 @@ def step1money2():
 def step1money3():
 	return render_template("step1money.html")
 
+@app.route("/step2health.html")
+def step2health():
+	return render_template("step2health.html")
+
+@app.route("/step2")
+def step2health2():
+	return render_template("step2health.html")
+
+@app.route("/health")
+def step2health3():
+	return render_template("step2health.html")
+
+@app.route("/step3family.html")
+def step3family():
+	return render_template("step3family.html")
+
+@app.route("/step3")
+def step3family2():
+	return render_template("step3family.html")
+
+@app.route("/family")
+def step3family3():
+	return render_template("step3family.html")
+
+@app.route("/step4work.html")
+def step4work():
+	return render_template("step4work.html")
+
+@app.route("/step4")
+def step4work2():
+	return render_template("step4work.html")
+
+@app.route("/work")
+def step4work3():
+	return render_template("step4work.html")
+
+@app.route("/step5hobby.html")
+def step5hobby():
+	return render_template("step5hobby.html")
+
+@app.route("/step5")
+def step5hobby2():
+	return render_template("step5hobby.html")
+
+@app.route("/hobby")
+def step5hobby3():
+	return render_template("step5hobby.html")
+
+@app.route("/step6modele.html")
+def step6modele():
+	return render_template("step6modele.html")
+
+@app.route("/step6")
+def step6modele2():
+	return render_template("step6modele.html")
+
+@app.route("/modele")
+def step6modele3():
+	return render_template("step6modele.html")
+
+@app.route("/step7want.html")
+def step7want():
+	return render_template("step7want.html")
+
+@app.route("/step7")
+def step7want2():
+	return render_template("step7want.html")
+
+@app.route("/want")
+def step7want3():
+	return render_template("step7want.html")
+
+
+
+
 
 # ファイル容量上限 : 1MB
 app.config['MAX_CONTENT_LENGTH'] = 1 * 1024 * 1024
