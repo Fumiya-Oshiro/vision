@@ -38,8 +38,17 @@ def about():
 def about2():
 	return render_template("aboutpage.html")
 
+@app.route("/step1money.html")
+def step1money():
+	return render_template("step1money.html")
 
+@app.route("/step1")
+def step1money2():
+	return render_template("step1money.html")
 
+@app.route("/money")
+def step1money3():
+	return render_template("step1money.html")
 
 
 # ファイル容量上限 : 1MB
