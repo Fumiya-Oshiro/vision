@@ -1,10 +1,14 @@
-body{
+body {
     text-align: center;
+    background-image: url(bgframe.png);
+    background-image: no-repeat center center;
+    background-size: cover;
 }
 
 .a {
     text-align: center;
 }
+
 .exposition1 p {
     font-size: 20px;
 }
@@ -14,12 +18,13 @@ body{
 }
 
 
-.container{
+.container {
     font-size: 20px;
-    width: 1000px ;
-    margin :0 auto;
+    width: 800px;
+    margin: 0 auto;
     text-align: center;
 }
- .container {
-     text-align: left;
- }
+
+.container {
+    text-align: left;
+}
