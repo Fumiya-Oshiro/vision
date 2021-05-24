@@ -166,7 +166,9 @@ def step7want3():
 def step7want4():
 	return render_template("step7want.html")
 
-
+@app.route("/finalpage.html")
+def finalpage():
+	return render_template("/finalpage.html")
 
 
 

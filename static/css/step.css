@@ -15,10 +15,6 @@ body {
     margin-top: 50px;
 }
 
-.picselect {
-    text-align: center;
-}
-
 .container {
     font-size: 20px;
     width: 800px;
@@ -39,8 +35,9 @@ input.button8 {
 section {
     max-width: 300px;
     margin: 0 auto;
-  }
-  a.btn_02 {
+}
+
+a.btn_02 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,12 +53,14 @@ section {
     text-decoration: none;
     position: relative;
     transition-duration: 0.2s;
-  }
-  a.btn_02:hover {
+}
+
+a.btn_02:hover {
     background: orangered;
     color: #fff;
-  }
-  a.btn_02:before {
+}
+
+a.btn_02:before {
     content: "";
     display: inline-block;
     width: 0;
@@ -73,18 +72,22 @@ section {
     top: 50%;
     left: 6%;
     margin-top: -7px;
-  }
-  a.btn_02:hover:before {
+}
+
+a.btn_02:hover:before {
     border-color: transparent transparent transparent #fff;
-  }
-  
+}
+
 .radio {
     display: none;
 }
 
-.radio_image{
+.radio_image {
     height: 300px;
     width: 300px;
+    margin: 10px 20px;
+    border-radius: 10%;
+    cursor: pointer;
 }
 
 .radio+.radio_image {
@@ -96,5 +99,3 @@ section {
     border: 3px #ff0000 solid;
     background-color: #ffeeee;
 }
-
-
