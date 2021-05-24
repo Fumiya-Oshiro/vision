@@ -1,0 +1,9 @@
+body {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    background-color: black;
+    /* background-image: url(../img/tree.jpg); */
+    /* no-repeat center center */
+    background-size: auto;
+}
