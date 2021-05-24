@@ -319,15 +319,69 @@ def dbtest():
 
 @app.route("/dbtest", methods=["POST"])
 def dbtest2():
-	image_id = request.form.get("dbtest")
-	image_id = int(dbtest)
-	conn = sqlite3.connect('vision.db')
-	c = conn.cursor()
-	c.execute("select path from iamges where id = ?",(iamge_id,) )
-	path = c.fetchone()
-	conn.commit()
-	conn.close()
-	return render_template("dbtest.html", path = path)
+	if request.form.get("dbtest") == "1":
+		i = 1
+		conn = sqlite3.connect('vision.db')
+		c = conn.cursor()
+		c.execute("select path from iamges where id = ?",(i,) )
+		path = c.fetchone()
+		conn.commit()
+		conn.close()
+		return render_template("dbtest.html", path = path)
+
+	elif request.form.get("dbtest") == "2":
+		i = 2
+		conn = sqlite3.connect('vision.db')
+		c = conn.cursor()
+		c.execute("select path from iamges where id = ?",(i,) )
+		path = c.fetchone()
+		conn.commit()
+		conn.close()
+		return render_template("dbtest.html", path = path)
+
+	elif request.form.get("dbtest") == "3":
+		i = 3
+		conn = sqlite3.connect('vision.db')
+		c = conn.cursor()
+		c.execute("select path from iamges where id = ?",(i,) )
+		path = c.fetchone()
+		conn.commit()
+		conn.close()
+		return render_template("dbtest.html", path = path)
+
+	elif request.form.get("dbtest") == "4":
+		i = 4
+		conn = sqlite3.connect('vision.db')
+		c = conn.cursor()
+		c.execute("select path from iamges where id = ?",(i,) )
+		path = c.fetchone()
+		conn.commit()
+		conn.close()
+		return render_template("dbtest.html", path = path)
+
+	elif request.form.get("dbtest") == "5":
+		i = 5
+		conn = sqlite3.connect('vision.db')
+		c = conn.cursor()
+		c.execute("select path from iamges where id = ?",(i,) )
+		path = c.fetchone()
+		conn.commit()
+		conn.close()
+		return render_template("dbtest.html", path = path)
+
+	elif request.form.get("dbtest") == "6":
+		i = 6
+		conn = sqlite3.connect('vision.db')
+		c = conn.cursor()
+		c.execute("select path from iamges where id = ?",(i,) )
+		path = c.fetchone()
+		conn.commit()
+		conn.close()
+		return render_template("dbtest.html", path = path)
+	
+	else:
+		please_select = "ボタンを選択してください"
+		return render_template("dbtest.html", please_select = please_select)
 
 
 
