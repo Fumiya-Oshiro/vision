@@ -1,7 +1,19 @@
+input {
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+}
+
 .imagebutton {
     border: solid;
     border-color: black;
     border-width: 10px;
+}
+
+.imagebutton2 {
+    border: solid;
+    border-color: black;
+    border-width: 5px;
 }
 
 .border-test {
@@ -19,7 +31,7 @@
 }
 
 button {
-    border: 3px;
+    border: 1px;
     border-color: black;
     border-style: solid;
     padding: 0 0;
@@ -28,6 +40,12 @@ button {
 
 button:active {
     background-color: green;
+    border: 5px;
+    border-color: black;
+    border-style: solid;
+}
+
+.imagebottun2:checked {
     border: 10px;
     border-color: black;
     border-style: solid;
