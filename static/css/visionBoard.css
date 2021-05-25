@@ -1,30 +1,23 @@
 body {
     text-align: center;
-    background-image: url(../img/woody.jpeg);
+    /* background-image: url(../img/woody.jpeg); */
+    width: 100%;
+    border:20px solid orangered;/* 枠線 */
+    box-sizing:border-box;
+    margin-top: 20px;
 }
 
 img {
     height: 300px;
     width: 300px;
     margin: 10px 20px;
-
+    border-radius: 10%;
 }
 
 .catch {
     font-size: 50px;
 }
 
-/* div {
-    width: 200px;
-    height: 2000px;
-    border: solid black 3px;
-    position: relative;
+p.name{
+    font-size: 35px;
 }
-p {
-background-color: red;
-width: 50px;
-height: 50px;
-position: fixed;
-right: 10px;
-bottom: 20px;
-} */
