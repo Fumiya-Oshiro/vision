@@ -1,9 +1,10 @@
 body {
     text-align: center;
-    background-image: url(../img/woody.jpeg);
+    background-image: url("../img/woody.jpeg");
+    background-size: cover;
 }
 
-img {
+s img {
     height: 300px;
     width: 300px;
     margin: 10px 20px;
