@@ -263,7 +263,7 @@ def finalpage():
 		please_select = "ボタンを選択してください"
 		return render_template("/step7want.html", please_select = please_select)
 
-@app.route("/visionBoard.html")
+@app.route("/visionBoard.html", methods=["POST"])
 def visionBoard():
 	board_name = request.form.get("user_name")
 	global step1

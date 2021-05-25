@@ -1,3 +1,19 @@
+body {
+    text-align: center;
+    background-image: url(../img/woody.jpeg);
+}
+
+img {
+    height: 300px;
+    width: 300px;
+    margin: 10px 20px;
+
+}
+
+.catch {
+    font-size: 50px;
+}
+
 /* div {
     width: 200px;
     height: 2000px;
@@ -12,7 +28,3 @@ position: fixed;
 right: 10px;
 bottom: 20px;
 } */
-
-body {
-    text-align: center;
-}
