@@ -275,6 +275,14 @@ def visionBoard():
 	global step7
 	return render_template("/visionBoard.html", step1 = step1, step2 = step2,step3 = step3, step4 = step4, step5 = step5, step6 = step6, step7 = step7, board_name = board_name)
 
+@app.errorhandler(403)
+def mistake403(code):
+    return 'There is a mistake in your url! 403エラーだよ'
+
+
+@app.errorhandler(404)
+def notfound404(code):
+    return "404だよ！！見つからないよ！！！"
 
 
 
@@ -502,3 +510,4 @@ def dbtest2():
 if __name__ == "__main__":
     # Flask が持っている開発用サーバーを、実行します。
     app.run(debug=True)
+
