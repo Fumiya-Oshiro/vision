@@ -54,121 +54,228 @@ def about2():
 def about3():
 	return render_template("aboutpage.html")
 
+step1 = "仮入れ"
+step2 = "仮入れ"
+step3 = "仮入れ"
+step4 = "仮入れ"
+step5 = "仮入れ"
+step6 = "仮入れ"
+step7 = "仮入れ"
+
 @app.route("/step1money.html")
 def step1money():
 	return render_template("step1money.html")
 
-@app.route("/step1money")
-def step1money2():
-	return render_template("step1money.html")
 
-@app.route("/step1")
-def step1money3():
-	return render_template("step1money.html")
-
-@app.route("/money")
-def step1money4():
-	return render_template("step1money.html")
-
-@app.route("/step2health.html")
+@app.route("/step2health.html", methods=["POST"])
 def step2health():
-	return render_template("step2health.html")
+	global step1
+	if request.form.get("q1") == "1":
+		step1 = "../static/img/kate-images/step1money/1.jpg"
+		return render_template("/step2health.html", step1 = step1)
+	elif request.form.get("q1") == "2":
+		step1 = "../static/img/kate-images/step1money/2.jpg"
+		return render_template("/step2health.html", step1 = step1)
+	elif request.form.get("q1") == "3":
+		step1 = "../static/img/kate-images/step1money/3.jpg"
+		return render_template("/step2health.html", step1 = step1)
+	elif request.form.get("q1") == "4":
+		step1 = "../static/img/kate-images/step1money/4.jpg"
+		return render_template("/step2health.html", step1 = step1)
+	elif request.form.get("q1") == "5":
+		step1 = "../static/img/kate-images/step1money/5.jpg"
+		return render_template("/step2health.html", step1 = step1)
+	elif request.form.get("q1") == "6":
+		step1 = "../static/img/kate-images/step1money/6.jpg"
+		return render_template("/step2health.html", step1 = step1)
+	else:
+		please_select = "ボタンを選択してください"
+		return render_template("/step1money.html", please_select = please_select)
 
-@app.route("/step2health")
-def step2healt2h():
-	return render_template("step2health.html")
-
-@app.route("/step2")
-def step2health3():
-	return render_template("step2health.html")
-
-@app.route("/health")
-def step2health4():
-	return render_template("step2health.html")
-
-@app.route("/step3family.html")
+@app.route("/step3family.html", methods=["POST"])
 def step3family():
-	return render_template("step3family.html")
+	global step1
+	global step2
+	if request.form.get("q2") == "1":
+		step2 = "../static/img/kate-images/step2health/8.jpg"
+		return render_template("/step3family.html", step1 = step1, step2 = step2)
+	elif request.form.get("q2") == "2":
+		step2 = "../static/img/kate-images/step2health/9.jpg"
+		return render_template("/step3family.html", step1 = step1, step2 = step2)
+	elif request.form.get("q2") == "3":
+		step2 = "../static/img/kate-images/step2health/10.jpg"
+		return render_template("/step3family.html", step1 = step1, step2 = step2)
+	elif request.form.get("q2") == "4":
+		step2 = "../static/img/kate-images/step2health/11.jpg"
+		return render_template("/step3family.html", step1 = step1, step2 = step2)
+	elif request.form.get("q2") == "5":
+		step2 = "../static/img/kate-images/step2health/12.jpg"
+		return render_template("/step3family.html", step1 = step1, step2 = step2)
+	elif request.form.get("q2") == "6":
+		step2 = "../static/img/kate-images/step2health/13.jpg"
+		return render_template("/step3family.html", step1 = step1, step2 = step2)
+	else:
+		please_select = "ボタンを選択してください"
+		return render_template("/step2health.html", please_select = please_select)
 
-@app.route("/step3family")
-def step3family2():
-	return render_template("step3family.html")
-
-@app.route("/step3")
-def step3family3():
-	return render_template("step3family.html")
-
-@app.route("/family")
-def step3family4():
-	return render_template("step3family.html")
-
-@app.route("/step4work.html")
+@app.route("/step4work.html", methods=["POST"])
 def step4work():
-	return render_template("step4work.html")
+	global step1
+	global step2
+	global step3
+	if request.form.get("q3") == "1":
+		step3 = "../static/img/kate-images/step3family/15.jpg"
+		return render_template("/step4work.html", step1 = step1, step2 = step2,step3 = step3)
+	elif request.form.get("q3") == "2":
+		step3 = "../static/img/kate-images/step3family/16.jpg"
+		return render_template("/step4work.html", step1 = step1, step2 = step2,step3 = step3)
+	elif request.form.get("q3") == "3":
+		step3 = "../static/img/kate-images/step3family/17.jpg"
+		return render_template("/step4work.html", step1 = step1, step2 = step2,step3 = step3)
+	elif request.form.get("q3") == "4":
+		step3 = "../static/img/kate-images/step3family/18.jpg"
+		return render_template("/step4work.html", step1 = step1, step2 = step2,step3 = step3)
+	elif request.form.get("q3") == "5":
+		step3 = "../static/img/kate-images/step3family/19.jpg"
+		return render_template("/step4work.html", step1 = step1, step2 = step2,step3 = step3)
+	elif request.form.get("q3") == "6":
+		step3 = "../static/img/kate-images/step3family/20.jpg"
+		return render_template("/step4work.html", step1 = step1, step2 = step2,step3 = step3)
+	else:
+		please_select = "ボタンを選択してください"
+		return render_template("/step3family.html", please_select = please_select)
 
-@app.route("/step4work")
-def step4work2():
-	return render_template("step4work.html")
-
-@app.route("/step4")
-def step4work3():
-	return render_template("step4work.html")
-
-@app.route("/work")
-def step4work4():
-	return render_template("step4work.html")
-
-@app.route("/step5hobby.html")
+@app.route("/step5hobby.html", methods=["POST"])
 def step5hobby():
-	return render_template("step5hobby.html")
+	global step1
+	global step2
+	global step3
+	global step4
+	if request.form.get("q4") == "1":
+		step4 = "../static/img/kate-images/step4work/22.jpg"
+		return render_template("/step5hobby.html", step1 = step1, step2 = step2,step3 = step3, step4 = step4)
+	elif request.form.get("q4") == "2":
+		step4 = "../static/img/kate-images/step4work/23.jpg"
+		return render_template("/step5hobby.html", step1 = step1, step2 = step2,step3 = step3, step4 = step4)
+	elif request.form.get("q4") == "3":
+		step4 = "../static/img/kate-images/step4work/24.jpg"
+		return render_template("/step5hobby.html", step1 = step1, step2 = step2,step3 = step3, step4 = step4)
+	elif request.form.get("q4") == "4":
+		step4 = "../static/img/kate-images/step4work/25.jpg"
+		return render_template("/step5hobby.html", step1 = step1, step2 = step2,step3 = step3, step4 = step4)
+	elif request.form.get("q4") == "5":
+		step4 = "../static/img/kate-images/step4work/26.jpg"
+		return render_template("/step5hobby.html", step1 = step1, step2 = step2,step3 = step3, step4 = step4)
+	elif request.form.get("q4") == "6":
+		step4 = "../static/img/kate-images/step4work/27.jpg"
+		return render_template("/step5hobby.html", step1 = step1, step2 = step2,step3 = step3, step4 = step4)
+	else:
+		please_select = "ボタンを選択してください"
+		return render_template("/step4work.html", please_select = please_select)
 
-@app.route("/step5hobby")
-def step5hobby2():
-	return render_template("step5hobby.html")
-
-@app.route("/step5")
-def step5hobby3():
-	return render_template("step5hobby.html")
-
-@app.route("/hobby")
-def step5hobby4():
-	return render_template("step5hobby.html")
-
-@app.route("/step6modele.html")
+@app.route("/step6modele.html", methods=["POST"])
 def step6modele():
-	return render_template("step6modele.html")
+	global step1
+	global step2
+	global step3
+	global step4
+	global step5
+	if request.form.get("q5") == "1":
+		step5 = "../static/img/kate-images/step5hobby/29.jpg"
+		return render_template("/step6modele.html", step1 = step1, step2 = step2,step3 = step3, step4 = step4, step5 = step5)
+	elif request.form.get("q5") == "2":
+		step5 = "../static/img/kate-images/step5hobby/30.jpg"
+		return render_template("/step6modele.html", step1 = step1, step2 = step2,step3 = step3, step4 = step4, step5 = step5)
+	elif request.form.get("q5") == "3":
+		step5 = "../static/img/kate-images/step5hobby/31.jpg"
+		return render_template("/step6modele.html", step1 = step1, step2 = step2,step3 = step3, step4 = step4, step5 = step5)
+	elif request.form.get("q5") == "4":
+		step5 = "../static/img/kate-images/step5hobby/32.jpg"
+		return render_template("/step6modele.html", step1 = step1, step2 = step2,step3 = step3, step4 = step4, step5 = step5)
+	elif request.form.get("q5") == "5":
+		step5 = "../static/img/kate-images/step5hobby/33.jpg"
+		return render_template("/step6modele.html", step1 = step1, step2 = step2,step3 = step3, step4 = step4, step5 = step5)
+	elif request.form.get("q5") == "6":
+		step5 = "../static/img/kate-images/step5hobby/34.jpg"
+		return render_template("/step6modele.html", step1 = step1, step2 = step2,step3 = step3, step4 = step4, step5 = step5)
+	else:
+		please_select = "ボタンを選択してください"
+		return render_template("/step5hobby.html", please_select = please_select)
 
-@app.route("/step6modele")
-def step6modele2():
-	return render_template("step6modele.html")
-
-@app.route("/step6")
-def step6modele3():
-	return render_template("step6modele.html")
-
-@app.route("/modele")
-def step6modele4():
-	return render_template("step6modele.html")
-
-@app.route("/step7want.html")
+@app.route("/step7want.html", methods=["POST"])
 def step7want():
-	return render_template("step7want.html")
+	global step1
+	global step2
+	global step3
+	global step4
+	global step5
+	global step6
+	if request.form.get("q6") == "1":
+		step6 = "../static/img/kate-images/step6modele/36.jpg"
+		return render_template("/step7want.html", step1 = step1, step2 = step2,step3 = step3, step4 = step4, step5 = step5, step6 = step6)
+	elif request.form.get("q6") == "2":
+		step6 = "../static/img/kate-images/step6modele/37.jpg"
+		return render_template("/step7want.html", step1 = step1, step2 = step2,step3 = step3, step4 = step4, step5 = step5, step6 = step6)
+	elif request.form.get("q6") == "3":
+		step6 = "../static/img/kate-images/step6modele/38.jpg"
+		return render_template("/step7want.html", step1 = step1, step2 = step2,step3 = step3, step4 = step4, step5 = step5, step6 = step6)
+	elif request.form.get("q6") == "4":
+		step6 = "../static/img/kate-images/step6modele/39.jpg"
+		return render_template("/step7want.html", step1 = step1, step2 = step2,step3 = step3, step4 = step4, step5 = step5, step6 = step6)
+	elif request.form.get("q6") == "5":
+		step6 = "../static/img/kate-images/step6modele/40.jpg"
+		return render_template("/step7want.html", step1 = step1, step2 = step2,step3 = step3, step4 = step4, step5 = step5, step6 = step6)
+	elif request.form.get("q6") == "6":
+		step6 = "../static/img/kate-images/step6modele/41.jpg"
+		return render_template("/step7want.html", step1 = step1, step2 = step2,step3 = step3, step4 = step4, step5 = step5, step6 = step6)
+	else:
+		please_select = "ボタンを選択してください"
+		return render_template("/step6modele.html", please_select = please_select)
 
-@app.route("/step7want")
-def step7want2():
-	return render_template("step7want.html")
-
-@app.route("/step7")
-def step7want3():
-	return render_template("step7want.html")
-
-@app.route("/want")
-def step7want4():
-	return render_template("step7want.html")
-
-@app.route("/finalpage.html")
+@app.route("/finalpage.html", methods=["POST"])
 def finalpage():
-	return render_template("/finalpage.html")
+	global step1
+	global step2
+	global step3
+	global step4
+	global step5
+	global step6
+	global step7
+	if request.form.get("q7") == "1":
+		step7 = "../static/img/kate-images/step7want/43.jpg"
+		return render_template("/finalpage.html", step1 = step1, step2 = step2,step3 = step3, step4 = step4, step5 = step5, step6 = step6, step7 = step7)
+	elif request.form.get("q7") == "2":
+		step7 = "../static/img/kate-images/step7want/44.jpg"
+		return render_template("/finalpage.html", step1 = step1, step2 = step2,step3 = step3, step4 = step4, step5 = step5, step6 = step6, step7 = step7)
+	elif request.form.get("q7") == "3":
+		step7 = "../static/img/kate-images/step7want/45.jpg"
+		return render_template("/finalpage.html", step1 = step1, step2 = step2,step3 = step3, step4 = step4, step5 = step5, step6 = step6, step7 = step7)
+	elif request.form.get("q7") == "4":
+		step7 = "../static/img/kate-images/step7want/46.jpg"
+		return render_template("/finalpage.html", step1 = step1, step2 = step2,step3 = step3, step4 = step4, step5 = step5, step6 = step6, step7 = step7)
+	elif request.form.get("q7") == "5":
+		step7 = "../static/img/kate-images/step7want/47.jpg"
+		return render_template("/finalpage.html", step1 = step1, step2 = step2,step3 = step3, step4 = step4, step5 = step5, step6 = step6, step7 = step7)
+	elif request.form.get("q7") == "6":
+		step7 = "../static/img/kate-images/step7want/48.jpg"
+		return render_template("/finalpage.html", step1 = step1, step2 = step2,step3 = step3, step4 = step4, step5 = step5, step6 = step6, step7 = step7)
+	else:
+		please_select = "ボタンを選択してください"
+		return render_template("/step7want.html", please_select = please_select)
+
+@app.route("/visionBoard.html")
+def visionBoard():
+	board_name = request.form.get("user_name")
+	global step1
+	global step2
+	global step3
+	global step4
+	global step5
+	global step6
+	global step7
+	return render_template("/visionBoard.html", step1 = step1, step2 = step2,step3 = step3, step4 = step4, step5 = step5, step6 = step6, step7 = step7, board_name = board_name)
+
+
 
 
 

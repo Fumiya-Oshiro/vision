@@ -27,7 +27,7 @@
     </div>
 
     <div class="images" align="center">
-        <form action="step2health.html">
+        <form action="/step2health.html" method="POST">
             
             <label><input type="radio" name="q1" value="1" class="radio"><img src="../static/img/kate-images/step1money/1.jpg" width="300px" heigth="300px" class="radio_image"></label>
             <label><input type="radio" name="q1" value="2" class="radio"><img src="../static/img/kate-images/step1money/2.jpg" width="300px" heigth="300px" class="radio_image"></label>
@@ -42,8 +42,11 @@
         </form>
     </div>
 
+    <p>{{ please_select }}</p>
+
+
     <section>         
-        <a href="#" class="btn_02">次のページに進む</a>
+        <a href="/step2health.html" class="btn_02">次のページに進む</a>
     </section> 
 
 </body>

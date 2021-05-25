@@ -99,3 +99,11 @@ a.btn_02:hover:before {
     border: 3px #ff0000 solid;
     background-color: #ffeeee;
 }
+
+.step {
+    height: 300px;
+    width: auto;
+    margin: 0 auto;
+    background-color: lightyellow;
+    text-align: center;
+}

@@ -28,7 +28,7 @@
    
 
     <div class="images" align="center">
-        <form action="step7want.html">
+        <form action="step7want.html" method="POST">
             
             <label><input type="radio" name="q6" value="1" class="radio"><img src="../static/img/kate-images/step6modele/36.jpg" width="300px" heigth="300px" class="radio_image"></label>
             <label><input type="radio" name="q6" value="2" class="radio"><img src="../static/img/kate-images/step6modele/37.jpg" width="300px" heigth="300px" class="radio_image"></label>
@@ -43,6 +43,16 @@
         </form>
     </div>
 
+    <p>{{ please_select }}</p>
+
+    <div class="selected_images">
+        <p>選択済画像</p>
+        <img src="{{ step1 }}" alt="" height="100px" width="100px">
+        <img src="{{ step2 }}" alt="" height="100px" width="100px">
+        <img src="{{ step3 }}" alt="" height="100px" width="100px">
+        <img src="{{ step4 }}" alt="" height="100px" width="100px">
+        <img src="{{ step5 }}" alt="" height="100px" width="100px">
+    </div>
 
 </body>
 </html>

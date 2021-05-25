@@ -28,7 +28,7 @@
    
 
     <div class="images" align="center">
-        <form action="step4work.html">
+        <form action="step4work.html" method="POST">
             
             <label><input type="radio" name="q3" value="1" class="radio"><img src="../static/img/kate-images/step3family/15.jpg" width="300px" heigth="300px" class="radio_image"></label>
             <label><input type="radio" name="q3" value="2" class="radio"><img src="../static/img/kate-images/step3family/16.jpg" width="300px" heigth="300px" class="radio_image"></label>
@@ -43,6 +43,13 @@
         </form>
     </div>
 
+    <p>{{ please_select }}</p>
+
+    <div class="selected_images">
+        <p>選択済画像</p>
+        <img src="{{ step1 }}" alt="" height="100px" width="100px">
+        <img src="{{ step2 }}" alt="" height="100px" width="100px">
+    </div>
 
 </body>
 </html>
