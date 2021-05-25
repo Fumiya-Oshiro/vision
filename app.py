@@ -492,9 +492,32 @@ def dbtest2():
 		please_select = "ボタンを選択してください"
 		return render_template("dbtest.html", please_select = please_select)
 
+@app.route("/dbtest3",methods=["POST"])
+def dbtest3():
+	name = request.form.get("name")
+	dbtestp = "データベースてすと"
+	conn = sqlite3.connect('test.db')
+	c = conn.cursor()
+	c.execute("insert into testtable values(name)",(name,))
+	i = c.fetchone()
+	path = c.fetchone()
+	conn.commit()
+	conn.close()
+	return render_template("dbtest.html",dbtestp)
+
+@app.route("/dbtest4",methods=["POST"])
+def dbtest4():
+	conn = sqlite3.connect('test.db')
+	c = conn.cursor()
+	c.execute("select name from testtable where id = 2")
+	dbtest4 = c.fetchone()
+	path = c.fetchone()
+	conn.commit()
+	conn.close()
+	return render_template("dbtest.html",dbtest4)
 
 
-
+# c.execute("select id from user where name = ? and password = ?", (name, password) )
 # ここまで大城のテストの為のコード
 # ここまで大城のテストの為のコード
 
