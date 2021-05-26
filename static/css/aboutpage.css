@@ -1,8 +1,12 @@
 body {
     text-align: center;
-    background-image: url(../img/bgframe.png);
+    /* background-image: url(../img/bgborder.jpg); */
     /* no-repeat center center */
-    background-size: cover;
+    background-size: auto auto;
+}
+
+p {
+    line-height: 25px;
 }
 
 .a {
@@ -15,6 +19,18 @@ body {
 
 .exposition2 {
     margin-top: 50px;
+}
+
+
+.background {
+    background: #e7e2e2;
+    padding: 20px;
+    border: 6px dashed #2ee0e0;
+    box-shadow: 0 0 0 8px #2ee0e0;
+    -moz-box-shadow: 0 0 0 5px #e7e2e2;
+    -webkit-box-shadow: 0 0 0 5px #e7e2e2;
+    font-size: 100%;
+    border-radius: 20px;
 }
 
 

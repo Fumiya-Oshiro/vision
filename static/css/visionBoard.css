@@ -2,12 +2,13 @@ body {
     text-align: center;
     /* background-image: url(../img/woody.jpeg); */
     width: 100%;
-    border:20px solid orangered;/* 枠線 */
-    box-sizing:border-box;
+    border: 20px solid orangered;
+    /* 枠線 */
+    box-sizing: border-box;
     margin-top: 20px;
 }
 
-s img {
+img {
     height: 300px;
     width: 300px;
     margin: 10px 20px;
@@ -18,6 +19,6 @@ s img {
     font-size: 50px;
 }
 
-p.name{
+p.name {
     font-size: 35px;
 }
