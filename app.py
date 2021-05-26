@@ -445,7 +445,6 @@ def dbtest2():
 		conn.commit()
 		conn.close()
 		return render_template("dbtest.html", path = path)
-
 	elif request.form.get("dbtest") == "2":
 		i = 2
 		conn = sqlite3.connect('vision.db')
@@ -455,7 +454,6 @@ def dbtest2():
 		conn.commit()
 		conn.close()
 		return render_template("dbtest.html", path = path)
-
 	elif request.form.get("dbtest") == "3":
 		i = 3
 		conn = sqlite3.connect('vision.db')
@@ -465,7 +463,6 @@ def dbtest2():
 		conn.commit()
 		conn.close()
 		return render_template("dbtest.html", path = path)
-
 	elif request.form.get("dbtest") == "4":
 		i = 4
 		conn = sqlite3.connect('vision.db')
@@ -475,7 +472,6 @@ def dbtest2():
 		conn.commit()
 		conn.close()
 		return render_template("dbtest.html", path = path)
-
 	elif request.form.get("dbtest") == "5":
 		i = 5
 		conn = sqlite3.connect('vision.db')
@@ -485,7 +481,6 @@ def dbtest2():
 		conn.commit()
 		conn.close()
 		return render_template("dbtest.html", path = path)
-
 	elif request.form.get("dbtest") == "6":
 		i = 6
 		conn = sqlite3.connect('vision.db')
@@ -495,10 +490,16 @@ def dbtest2():
 		conn.commit()
 		conn.close()
 		return render_template("dbtest.html", path = path)
-	
 	else:
 		please_select = "ボタンを選択してください"
 		return render_template("dbtest.html", please_select = please_select)
+
+@app.route("/inttest", methods=["POST"])
+def inttest():
+	get_int = request.form.get("name")
+	return_int = int(get_int) + 10
+	return render_template("/imagetest2.html",return_int)
+
 
 @app.route("/dbtest3",methods=["POST"])
 def dbtest3():
@@ -515,14 +516,27 @@ def dbtest3():
 
 @app.route("/dbtest4",methods=["POST"])
 def dbtest4():
-	conn = sqlite3.connect('test.db')
+	name = request.form.get("name")
+	password = request.form.get("password")
+	conn = sqlite3.connect('dbtest.db')
 	c = conn.cursor()
-	c.execute("select name from testtable where id = 2")
-	dbtest4 = c.fetchone()
-	path = c.fetchone()
+	c.execute("insert into test values(null,?,?)", (name,password))
 	conn.commit()
 	conn.close()
-	return render_template("dbtest.html",dbtest4)
+	return redirect('/dbtest.html')
+
+@app.route("/dbtest5",methods=["POST"])
+def dbtest5():
+	image_id = int(request.form.get('dbtest','')) #ラジオボタンのvalueの値を数値にして変数に格納。DBで使う
+	conn = sqlite3.connect('dbtest.db')
+	c = conn.cursor()
+	c.execute("select path from image where imageid = ?",(image_id,))
+	image_path = c.fetchone()
+	image_url = image_path[0]
+	# conn.commit()
+	conn.close()
+	return render_template("/dbtest.html", image_url = image_url)
+
 
 
 # c.execute("select id from user where name = ? and password = ?", (name, password) )
