@@ -532,10 +532,10 @@ def dbtest5():
 	c = conn.cursor()
 	c.execute("select path from image where imageid = ?",(image_id,))
 	image_path = c.fetchone()
-	image_url = image_path[0]
+	step1 = image_path[0]
 	# conn.commit()
 	conn.close()
-	return render_template("/dbtest.html", image_url = image_url)
+	return render_template("/dbtest.html", step1 = step1)
 
 
 
