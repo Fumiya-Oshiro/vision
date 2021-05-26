@@ -282,7 +282,8 @@ def mistake403(code):
 
 @app.errorhandler(404)
 def notfound404(code):
-    return "404だよ！！見つからないよ！！！"
+    return render_template("404error.html")
+	# "404だよ！！見つからないよ！！！"
 
 
 
