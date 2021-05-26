@@ -1,6 +1,5 @@
 body {
     text-align: center;
-    width: 150px;
 
 }
 
@@ -31,7 +30,7 @@ input.button8 {
 .button8 {
     display       : inline-block;
     border-radius : 5%;          /* 角丸       */
-    font-size     : 18pt;        /* 文字サイズ */
+    /* font-size     : 18pt;        /* 文字サイズ */
     text-align    : center;      /* 文字位置   */
     cursor        : pointer;     /* カーソル   */
     padding       : 12px 12px;   /* 余白       */
@@ -43,7 +42,7 @@ input.button8 {
     border        : 2px solid orangered;    /* 枠の指定 */
   }
 
-  .button8:hover {
+.button8:hover {
     box-shadow    : none;        /* カーソル時の影消去 */
     color         : orangered;     /* 背景色     */
     background    : #ffffff;     /* 文字色     */
@@ -54,7 +53,6 @@ section {
     margin: 0 auto;
 }
 
-
 .radio {
     display: none;
 }
@@ -64,6 +62,7 @@ section {
     width: 300px;
     margin: 10px 20px;
     border-radius: 10%;
+    cursor: pointer;
 }
 
 .radio+.radio_image {
@@ -82,4 +81,4 @@ section {
     margin: 0 auto;
     background-color: lightyellow;
     text-align: center;
-}
+} 
