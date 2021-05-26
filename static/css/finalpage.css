@@ -6,4 +6,10 @@ body {
     /* background-image: url(../img/tree.jpg); */
     /* no-repeat center center */
     background-size: auto;
+
+}
+
+.message {
+    margin: 10px auto;
+    width: 450px;
 }

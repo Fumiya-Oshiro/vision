@@ -1,6 +1,5 @@
 body {
     text-align: center;
-
 }
 
 .a {
@@ -47,11 +46,14 @@ input.button8 {
   }
 
 .button8:hover {
-    box-shadow    : none;        /* カーソル時の影消去 */
-    color         : orangered;     /* 背景色     */
-    background    : #ffffff;     /* 文字色     */
-  }
-  
+    box-shadow: none;
+    /* カーソル時の影消去 */
+    color: orangered;
+    /* 背景色     */
+    background: #ffffff;
+    /* 文字色     */
+}
+
 section {
     max-width: 300px;
     margin: 0 auto;
@@ -85,4 +87,4 @@ section {
     margin: 0 auto;
     background-color: lightyellow;
     text-align: center;
-} 
+}
