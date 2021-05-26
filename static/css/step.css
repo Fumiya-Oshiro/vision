@@ -7,6 +7,10 @@ body {
     text-align: center;
 }
 
+@media screen and (min-width: 700px){
+    .br-sp {display: none; }
+    }
+
 .exposition1 p {
     font-size: 20px;
 }
