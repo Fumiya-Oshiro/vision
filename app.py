@@ -66,7 +66,6 @@ step7 = "仮入れ"
 def step1money():
 	return render_template("step1money.html")
 
-
 @app.route("/step2health.html", methods=["POST"])
 def step2health():
 	global step1
