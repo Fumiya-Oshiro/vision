@@ -27,35 +27,6 @@ input.button8 {
     margin-bottom: 10px;
 }
 
-body {
-    text-align: center;
-
-}
-
-.a {
-    text-align: center;
-}
-
-.exposition1 p {
-    font-size: 20px;
-}
-
-.exposition2 {
-    margin-top: 50px;
-}
-
-.container {
-    font-size: 20px;
-    width: 800px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-input.button8 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
 .btn_02 {
     margin-top: 10px;
     margin-bottom: 10px;
