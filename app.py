@@ -68,7 +68,7 @@ def step1money():
 
 @app.route("/step2health.html", methods=["POST"])
 def step2health():
-	global step1
+	global step1	
 	if request.form.get("q1") == "1":
 		step1 = "../static/img/kate-images/step1money/1.jpg"
 		return render_template("/step2health.html", step1 = step1)
@@ -84,7 +84,7 @@ def step2health():
 	elif request.form.get("q1") == "5":
 		step1 = "../static/img/kate-images/step1money/5.jpg"
 		return render_template("/step2health.html", step1 = step1)
-	elif request.form.get("q1") == "6":
+	elif request.form.get("q6") == "6":
 		step1 = "../static/img/kate-images/step1money/6.jpg"
 		return render_template("/step2health.html", step1 = step1)
 	else:

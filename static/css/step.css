@@ -72,6 +72,10 @@ section {
     margin: 0 auto;
 }
 
+.file {
+    display: none;
+}
+
 .radio {
     display: none;
 }
@@ -92,6 +96,10 @@ section {
 .radio:checked+.radio_image {
     border: 3px #ff0000 solid;
     background-color: #ffeeee;
+}
+
+.file {
+    display: none;
 }
 
 .step {
