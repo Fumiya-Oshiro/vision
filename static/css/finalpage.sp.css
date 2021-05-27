@@ -11,15 +11,13 @@ body {
 
 .message {
     margin: 10px auto;
-    width: 450px;
+    width: 325px;
 }
 
 .input_p {
     line-height: 10px;
 }
 
-@media screen and (min-width: 700px) {
-    .br-sp {
-        display: none;
-    }
+h2 {
+    font-size: 15px;
 }
