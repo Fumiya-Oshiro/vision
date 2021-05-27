@@ -24,9 +24,21 @@
 </div>
 <br>
 <br>
-<form action="visionBoard.html" method="POST">
-	<p>あなたの名前を書き込んでね！</p>
-	<input type="text" name="user_name">
+
+<form action="visionBoard.html" method="POST" enctype="multipart/form-data">
+
+	<p class="input_p">あなたの名前</p>
+	<input type="text" name="user_name" placeholder="名前">
+    <br><br>
+
+    <p class="input_p">目標や願望を書き込んでね！</p>
+    <textarea name="dream" class="dream" cols="20" rows="4" placeholder="目標や願望"></textarea>
+    <br><br>
+
+    <p class="input_p">あなたの写真をアップ！</p>
+    <input type="file" id="filename" name="image" accept="image/*" required>
+    <br><br>
+
 	<input type="submit" value="ビジョンボードを作成！" id="button2" style="cursor:pointer"; >
 
 </form>

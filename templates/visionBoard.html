@@ -15,15 +15,17 @@
 
 
 
-    <p class="name">{{ name }}</p>
+    <p class="name">{{ board_name }}</p>
     <img src="{{ step1 }}" alt="">
     <img src="{{ step2 }}" alt="">
     <br>
     <img src="{{ step3 }}" alt="">
-    <img src="../static/img/icon.jpeg" alt="">
+    
+    <img src="{{ uploaded_image }}" alt="">
+    <!-- ../static/img/icon.jpeg -->
     <img src="{{ step4 }}" alt="">
     <br>
-    <p class="catch">キャッチコピーが入るかも</p>
+    <p class="catch">{{ dream }}</p>
     <img src="{{ step5 }}" alt="">
     <img src="{{ step6 }}" alt="">
     <img src="{{ step7 }}" alt="">
@@ -34,9 +36,11 @@
       </canvas>
     </div> -->
 
-    <p>
-    <a href="" id="ss" download="html_ss.png">スクリーンショット(document.body全体)をダウンロード</a>
-    </p>
+    <br>
+
+    <a href="" id="ss" download="html_ss.png" alt="ビジョンボードをダウンロード"><img src="../static/img/download.jpg" alt="ダウンロード" class="download"></a>
+    <p>ビジョンボードをダウンロード</p>
+    <!-- <a href="" id="ss" download="html_ss.png">スクリーンショット(document.body全体)をダウンロード</a> -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
     <script>

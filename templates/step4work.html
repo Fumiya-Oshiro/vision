@@ -40,18 +40,21 @@
             <label><input type="radio" name="q4" value="5" class="radio"><img src="../static/img/kate-images/step4work/26.jpg" width="300px" heigth="300px" class="radio_image"></label>
             <label><input type="radio" name="q4" value="6" class="radio"><img src="../static/img/kate-images/step4work/27.jpg" width="300px" heigth="300px" class="radio_image"></label>
             
-            <br><input type="submit" class="button8" value="決定">  
+            <br>
+            <button type="button" class="back_button" onclick="history.back()">戻る</button>
+            <button type="button" class="invisible_button">間</button>
+            <input type="submit" class="button8" value="決定">  
         
         </form>
     </div>
 
     <p>{{ please_select }}</p>
 
-    <div class="selected_images">
+    <div class="selected_images_line">
         <p>選んだ写真</p>
-        <img src="{{ step1 }}" alt="" height="100px" width="100px">
-        <img src="{{ step2 }}" alt="" height="100px" width="100px">
-        <img src="{{ step3 }}" alt="" height="100px" width="100px">
+        <img src="{{ step1 }}" class="selected_image" alt="">
+        <img src="{{ step2 }}" class="selected_image" alt="">
+        <img src="{{ step3 }}" class="selected_image" alt="">
     </div>
 
 </body>

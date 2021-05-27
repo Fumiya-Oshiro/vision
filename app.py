@@ -264,7 +264,12 @@ def finalpage():
 
 @app.route("/visionBoard.html", methods=["POST"])
 def visionBoard():
+	f = request.files.get('image') # ファイル名を取得
+	filename = secure_filename(f.filename) # ファイルを保存するディレクトリを指定
+	filepath = 'static/img/uploaded-images/' + filename # ファイルを保存する
+	f.save(filepath)
 	board_name = request.form.get("user_name")
+	dream = request.form.get("dream")
 	global step1
 	global step2
 	global step3
@@ -272,7 +277,31 @@ def visionBoard():
 	global step5
 	global step6
 	global step7
-	return render_template("/visionBoard.html", step1 = step1, step2 = step2,step3 = step3, step4 = step4, step5 = step5, step6 = step6, step7 = step7, board_name = board_name)
+	return render_template("/visionBoard.html", step1 = step1, step2 = step2,step3 = step3, step4 = step4, step5 = step5, step6 = step6, step7 = step7, board_name = board_name,dream = dream,uploaded_image = filepath)
+
+
+# flag = True, 
+
+
+#元ルーティング
+# @app.route("/visionBoard.html", methods=["POST"])
+# def visionBoard():
+# 	board_name = request.form.get("user_name")
+# 	dream = request.form.get("dream")
+# 	global step1
+# 	global step2
+# 	global step3
+# 	global step4
+# 	global step5
+# 	global step6
+# 	global step7
+# 	return render_template("/visionBoard.html", step1 = step1, step2 = step2,step3 = step3, step4 = step4, step5 = step5, step6 = step6, step7 = step7, board_name = board_name,dream = dream)
+
+
+
+
+
+
 
 @app.errorhandler(403)
 def mistake403(code):
