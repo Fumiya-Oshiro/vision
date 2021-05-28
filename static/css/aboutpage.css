@@ -23,9 +23,10 @@ p {
 
 
 .background {
-    background: #e7e2e2;
-    padding: 20px;
-    border: 6px dashed #2ee0e0;
+    background: white;
+    /* padding: 10px; */
+    padding: 0.1em 0.1em;
+    border: 6px dashed #5ffc2a;
     box-shadow: 0 0 0 8px #2ee0e0;
     -moz-box-shadow: 0 0 0 5px #e7e2e2;
     -webkit-box-shadow: 0 0 0 5px #e7e2e2;

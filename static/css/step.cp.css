@@ -109,6 +109,7 @@ section {
     margin: 0 auto;
     background-color: lightyellow;
     text-align: center;
+<<<<<<< HEAD
 }
 
 button.button8 {
@@ -117,6 +118,12 @@ button.button8 {
 }
 
 button.button8 {
+=======
+} 
+.back_button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+>>>>>>> 66be2ae3c5f6f5a1ad2cfdd2e2916dc87e4c1c7c
     display: inline-block;
     border-radius: 5%;
     /* 角丸       */
@@ -128,7 +135,11 @@ button.button8 {
     /* カーソル   */
     padding: 12px 12px;
     /* 余白       */
+<<<<<<< HEAD
     background: orangered;
+=======
+    background: springgreen;
+>>>>>>> 66be2ae3c5f6f5a1ad2cfdd2e2916dc87e4c1c7c
     /* 背景色     */
     color: #ffffff;
     /* 文字色     */
@@ -138,10 +149,54 @@ button.button8 {
     /* なめらか変化 */
     box-shadow: 6px 6px 3px #666666;
     /* 影の設定 */
+<<<<<<< HEAD
     border: 2px solid orangered;
     /* 枠の指定 */
 }
 
 .fileup {
     display: none;
+=======
+    border: 2px solid springgreen;
+    /* 枠の指定 */
+}
+
+/* 戻るボタンの上にマウスカーソルが来た時の表示 */
+.back_button:hover {
+    box-shadow: none;
+    /* カーソル時の影消去 */
+    color: springgreen;
+    /* 背景色     */
+    background: #ffffff;
+    /* 文字色     */
+}
+
+/* 戻るボタンと決定ボタンに間にある見えないボタン */
+.invisible_button {
+    visibility: hidden;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    border-radius: 5%;
+    /* 角丸       */
+    padding: 12px 12px;
+    /* 余白       */
+    line-height: 1em;
+    /* 1行の高さ  */
+    font-size: 18pt;
+    /* 文字サイズ */
+}
+
+/* 選択された画像が入る横一列のライン */
+.selected_images_line {
+    height: 160px;
+    width: auto;
+    background-color: lightyellow;
+}
+
+/* 選択された画像 */
+.selected_images_line .selected_image {
+    height: 100px;
+    width: 100px;
+>>>>>>> 66be2ae3c5f6f5a1ad2cfdd2e2916dc87e4c1c7c
 }
