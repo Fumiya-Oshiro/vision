@@ -27,9 +27,9 @@ p {
     /* padding: 10px; */
     padding: 0.1em 0.1em;
     border: 6px dashed #5ffc2a;
-    box-shadow: 0 0 0 8px #2ee0e0;
-    -moz-box-shadow: 0 0 0 5px #e7e2e2;
-    -webkit-box-shadow: 0 0 0 5px #e7e2e2;
+    box-shadow: 0 0 0 8px white;
+    -moz-box-shadow: 0 0 0 5px white;
+    -webkit-box-shadow: 0 0 0 5px white;
     font-size: 100%;
     border-radius: 20px;
 }
